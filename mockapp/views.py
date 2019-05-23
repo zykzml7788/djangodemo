@@ -50,7 +50,11 @@ def register(request):
 @require_POST
 def login(request):
 
-    usr = json.loads(request.body)
+    try:
+        usr = json.loads(request.body)
+    except Exception as e:
+        logger.info("参数格式错误:{}".format(e))
+        return fail_jsonresponse("参数格式错误",-3)
     username = usr.get("username")
     password = usr.get("password")
     if username and password:
