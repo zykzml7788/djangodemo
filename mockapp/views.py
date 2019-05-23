@@ -90,8 +90,11 @@ def query_all_user(request):
 @login_required
 def query_by_name(request):
     username = json.loads(request.body).get("username")
-    user = User.objects.get(username=username)
-    return success_jsonresponse("查询成功",100000,data=user)
+    if username:
+        user = User.objects.get(username=username)
+        return success_jsonresponse("查询成功",100000,data=object_to_json(user))
+    else:
+        return fail_jsonresponse("账号不能为空",-1)
 
 
 
