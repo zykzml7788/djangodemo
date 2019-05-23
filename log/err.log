@@ -1,0 +1,400 @@
+[2019-05-22 12:48:47,737][Thread-1:20176][task_id:mockapp.views][views.py:24][ERROR][UNIQUE constraint failed: auth_user.username]
+[2019-05-22 12:50:46,107][Thread-1:14964][task_id:mockapp.views][views.py:27][ERROR][UNIQUE constraint failed: auth_user.username]
+[2019-05-22 13:42:46,662][Thread-1:16140][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/login]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 59, in login
+    return success_jsonresponse("登入成功",100000,data=user)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 8, in success_jsonresponse
+    data = queryset_to_dict(data)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 28, in queryset_to_dict
+    js=serializers.serialize("json", queryset, ensure_ascii=False)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\serializers\__init__.py", line 128, in serialize
+    s.serialize(queryset, **options)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\serializers\base.py", line 90, in serialize
+    for count, obj in enumerate(queryset, start=1):
+TypeError: 'User' object is not iterable
+[2019-05-22 13:46:38,403][Thread-1:19764][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/login]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 59, in login
+    return success_jsonresponse("登入成功",100000,data=user)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 11, in success_jsonresponse
+    jsonstr = json.dumps(responsedict,ensure_ascii=False)
+  File "C:\python\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\python\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'User' is not JSON serializable
+[2019-05-22 13:47:29,277][Thread-1:10212][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/login]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 59, in login
+    return success_jsonresponse("登入成功",100000,data=user)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 13, in success_jsonresponse
+    jsonstr = json.dumps(responsedict,ensure_ascii=False)
+  File "C:\python\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\python\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'datetime' is not JSON serializable
+[2019-05-22 13:55:44,783][Thread-1:17452][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/login]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 59, in login
+    return success_jsonresponse("登入成功",100000,data=user)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 13, in success_jsonresponse
+    jsonstr = json.dumps(responsedict,ensure_ascii=False)
+  File "C:\python\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\python\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'datetime' is not JSON serializable
+[2019-05-22 14:00:21,180][Thread-1:20368][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/login]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 59, in login
+    return success_jsonresponse("登入成功",100000,data={"username":user.username,"email":user.email})
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 11, in success_jsonresponse
+    data = object_to_json(data)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 29, in object_to_json
+    return dict([(kk, obj.__dict__[kk]) for kk in obj.__dict__.keys() if kk != "_state"])
+AttributeError: 'dict' object has no attribute '__dict__'
+[2019-05-22 14:00:32,359][Thread-1:20368][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/login]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 59, in login
+    return success_jsonresponse("登入成功",100000,data={"username":user.username,"email":user.email})
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 11, in success_jsonresponse
+    data = object_to_json(data)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 29, in object_to_json
+    return dict([(kk, obj.__dict__[kk]) for kk in obj.__dict__.keys() if kk != "_state"])
+AttributeError: 'dict' object has no attribute '__dict__'
+[2019-05-22 14:06:39,734][Thread-1:3256][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/user/queryAll]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 48, in query_all_user
+    logger.info("查询成功,结果集:\n"+users)
+TypeError: must be str, not QuerySet
+[2019-05-22 14:50:33,727][Thread-1:2424][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/user/query]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 83, in query_by_name
+    return success_jsonresponse("查询成功",100000,data=user)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 11, in success_jsonresponse
+    jsonstr = json.dumps(responsedict,ensure_ascii=False)
+  File "C:\python\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\python\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'datetime' is not JSON serializable
+[2019-05-22 14:53:25,335][Thread-1:7088][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/user/query]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 89, in query_by_name
+    return success_jsonresponse("查询成功",100000,data=user)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 13, in success_jsonresponse
+    jsonstr = json.dumps(responsedict,ensure_ascii=False)
+  File "C:\python\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\python\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'datetime' is not JSON serializable
+[2019-05-22 14:54:45,130][Thread-1:6648][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/user/query]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 84, in query_by_name
+    return success_jsonresponse("查询成功",100000,data=user)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 22, in success_jsonresponse
+    jsonstr = json.dumps(responsedict,ensure_ascii=False)
+  File "C:\python\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\python\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'datetime' is not JSON serializable
+[2019-05-22 14:55:27,882][Thread-1:13632][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/user/query]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\views\decorators\http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 84, in query_by_name
+    return success_jsonresponse("查询成功",100000,data=user)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 22, in success_jsonresponse
+    jsonstr = json.dumps(responsedict,ensure_ascii=False)
+  File "C:\python\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\python\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'datetime' is not JSON serializable
+[2019-05-22 15:09:33,640][Thread-1:6244][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/logout]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 71, in logout
+    return success_jsonresponse("注销成功",100000)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 20, in success_jsonresponse
+    data = object_to_json(data)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 38, in object_to_json
+    return dict([(kk, obj.__dict__[kk]) for kk in obj.__dict__.keys() if kk != "_state"])
+AttributeError: 'NoneType' object has no attribute '__dict__'
+[2019-05-22 15:12:08,849][Thread-1:19744][task_id:django.request][log.py:228][ERROR][Internal Server Error: /mock/logout]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 72, in logout
+    return success_jsonresponse("注销成功", 100000)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 20, in success_jsonresponse
+    data = object_to_json(data)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 38, in object_to_json
+    return dict([(kk, obj.__dict__[kk]) for kk in obj.__dict__.keys() if kk != "_state"])
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\djcps\Desktop\mock\mock\mockapp\views.py", line 74, in logout
+    return fail_jsonresponse("你已经注销了哦",100000)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 30, in fail_jsonresponse
+    data = object_to_json(data)
+  File "C:\Users\djcps\Desktop\mock\mock\utils\common.py", line 38, in object_to_json
+    return dict([(kk, obj.__dict__[kk]) for kk in obj.__dict__.keys() if kk != "_state"])
+AttributeError: 'NoneType' object has no attribute '__dict__'
+[2019-05-22 15:27:45,057][Thread-1:3804][task_id:django.request][log.py:228][ERROR][Internal Server Error: /docs]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\urls\base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'rest_framework'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 54, in render
+    self.set_context(data, renderer_context)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 64, in set_context
+    renderer_context.update(self.get_auth_urls())
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 76, in get_auth_urls
+    urls['LOGIN_URL'] = resolve_url(settings.LOGIN_URL)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\shortcuts.py", line 148, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'rest_framework' is not a registered namespace
+[2019-05-22 15:31:26,163][Thread-3:16444][task_id:django.request][log.py:228][ERROR][Internal Server Error: /docs]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\urls\base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'rest_framework'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 54, in render
+    self.set_context(data, renderer_context)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 64, in set_context
+    renderer_context.update(self.get_auth_urls())
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 76, in get_auth_urls
+    urls['LOGIN_URL'] = resolve_url(settings.LOGIN_URL)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\shortcuts.py", line 148, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'rest_framework' is not a registered namespace
+[2019-05-22 15:42:08,555][Thread-3:20380][task_id:django.request][log.py:228][ERROR][Internal Server Error: /docs]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\urls\base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'rest_framework'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 54, in render
+    self.set_context(data, renderer_context)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 64, in set_context
+    renderer_context.update(self.get_auth_urls())
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 76, in get_auth_urls
+    urls['LOGIN_URL'] = resolve_url(settings.LOGIN_URL)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\shortcuts.py", line 148, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'rest_framework' is not a registered namespace
+[2019-05-22 15:48:46,146][Thread-3:18504][task_id:django.request][log.py:228][ERROR][Internal Server Error: /docs]
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\urls\base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'rest_framework'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 54, in render
+    self.set_context(data, renderer_context)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 64, in set_context
+    renderer_context.update(self.get_auth_urls())
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 76, in get_auth_urls
+    urls['LOGIN_URL'] = resolve_url(settings.LOGIN_URL)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\shortcuts.py", line 148, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\djcps\Desktop\mock\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'rest_framework' is not a registered namespace
