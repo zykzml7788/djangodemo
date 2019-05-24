@@ -6,6 +6,7 @@
 - 根据requirements.txt安装依赖包，可使用命令pip -r requirements.txt安装依赖
 
 ## 启动服务
+- 在控制台输入  python manage.py migrate 生成数据库相关表
 - 在控制台输入  python manage.py runserver 0.0.0.0:8000  启动django
 
 ## 接口文档（因为swagger插件生成不了文档，暂时先手动整理）
